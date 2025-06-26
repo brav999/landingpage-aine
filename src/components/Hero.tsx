@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Heart, Shield, Star } from 'lucide-react';
 
@@ -11,10 +10,10 @@ const Hero = () => {
   return (
     <section className="bg-gradient-to-br from-aine-light to-white py-20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col h-full justify-start animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-aine-purple mb-6 leading-tight">
-              Cuidado Especializado em 
+              Cuidado Especializado em
               <span className="text-aine-green block">Fisioterapia Pélvica</span>
             </h1>
             
@@ -38,7 +37,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-6 self-start">
               <div className="flex items-center space-x-2">
                 <Heart className="h-5 w-5 text-aine-purple" />
                 <span className="text-sm text-gray-600">Atendimento Humanizado</span>
@@ -54,15 +53,12 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="bg-gradient-to-br from-aine-purple/10 to-aine-green/10 rounded-3xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-aine-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-16 w-16 text-aine-purple" />
-                </div>
-                <p className="text-aine-purple font-medium">Seu bem-estar é nossa prioridade</p>
-              </div>
-            </div>
+          <div className="relative flex items-start justify-center self-start">
+            <img 
+              src="/images/logo.png" 
+              alt="Logo Ainê" 
+              className="w-auto max-w-xs md:max-w-md object-contain mx-auto"
+            />
           </div>
         </div>
       </div>

@@ -24,22 +24,14 @@ jobs:
       - name: Rodar testes
         run: npx vitest run
 
-  sonarcloud:
-    name: Análise de código com SonarCloud
+  sonarQube:
     runs-on: ubuntu-latest
-    environment: Preview
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Instalar Node.js
-        uses: actions/setup-node@v4
+      - name: Checkout código
+        uses: actions/checkout@v4
         with:
-          node-version: 20
-
-      - name: Instalar dependências
-        run: npm ci
-
-      - name: Analisar com SonarCloud
-        uses: SonarSource/sonarcloud-github-action@v2
+          fetch-depth: 0
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

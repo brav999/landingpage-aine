@@ -125,7 +125,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-aine-purple mb-1">Telefone</h4>
-                    <p className="text-gray-600">(11) 99999-9999</p>
+                    <p className="text-gray-600">(48) 3411-5334</p>
                     <p className="text-sm text-gray-500">WhatsApp disponível</p>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-aine-purple mb-1">Endereço</h4>
-                    <p className="text-gray-600">Rua das Flores, 123<br />Vila Madalena - São Paulo/SP</p>
+                    <p className="text-gray-600">Rua Princesa Isabel, 40, sala 1008<br />Centro - Criciúma/SC</p>
                   </div>
                 </div>
 
@@ -156,7 +156,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-aine-purple mb-1">Horário de Funcionamento</h4>
-                    <p className="text-gray-600">Segunda à Sexta: 8h às 18h<br />Sábado: 8h às 12h</p>
+                    <p className="text-gray-600">Segunda à Sexta: 8h às 19h<br /></p>
                   </div>
                 </div>
               </div>

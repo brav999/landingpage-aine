@@ -1,5 +1,5 @@
 
-import { Heart, Instagram, Facebook, Phone } from 'lucide-react';
+import { Heart, Instagram, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -38,13 +38,10 @@ const Footer = () => {
           <div>
             <h3 className="font-medium mb-4">Conecte-se Conosco</h3>
             <div className="flex space-x-4 mb-4">
-              <a href="#" className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
+              <a href="https://www.instagram.com/ainesaudefeminina/" target='blank' className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
+              <a href="https://api.whatsapp.com/message/W5FIXC4VYN32O1?autoload=1&app_absent=0" target='blank' className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
                 <Phone className="h-5 w-5" />
               </a>
             </div>

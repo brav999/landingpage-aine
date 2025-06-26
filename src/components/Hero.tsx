@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col h-full justify-start animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-aine-purple mb-6 leading-tight">
-              Cuidado Especializado em 
+              Cuidado Especializado em
               <span className="text-aine-green block">Fisioterapia Pélvica</span>
             </h1>
             

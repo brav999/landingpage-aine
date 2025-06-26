@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/e44563ff-0ae9-4dba-a8d1-7a0bde496099.png" 
-                alt="Ainê Fisioterapia" 
-                className="h-10 w-auto brightness-0 invert"
+              src="/images/green-logo.png" 
+              alt="Ainê Fisioterapia"
+              className="h-10 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-purple-100 leading-relaxed">

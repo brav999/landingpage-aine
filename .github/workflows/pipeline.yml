@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [homolog, main]
+    branches: [homolog]
   pull_request:
-    branches: [homolog, main]
+    branches: [homolog]
 
 jobs:
   test:
@@ -27,6 +27,7 @@ jobs:
   sonarcloud:
     name: Análise de código com SonarCloud
     runs-on: ubuntu-latest
+    environment: Preview
     steps:
       - uses: actions/checkout@v4
 

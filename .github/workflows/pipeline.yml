@@ -26,6 +26,7 @@ jobs:
 
   sonarQube:
     runs-on: ubuntu-latest
+    environment: Preview
     steps:
       - name: Checkout código
         uses: actions/checkout@v4

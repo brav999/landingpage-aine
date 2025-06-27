@@ -29,12 +29,12 @@ const Hero = () => {
               >
                 Agendar Avaliação
               </Button>
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 className="border-aine-green text-aine-green hover:bg-aine-green hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300"
               >
                 Saiba Mais
-              </Button>
+              </Button> */}
             </div>
 
             <div className="flex flex-wrap gap-6 self-start">

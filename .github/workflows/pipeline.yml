@@ -4,7 +4,7 @@ on:
   push:
     branches: [homolog]
   pull_request:
-    branches: [homolog]
+    branches: [main]
 
 jobs:
   test:

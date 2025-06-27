@@ -11,7 +11,7 @@ const Footer = () => {
               <img 
               src="/images/green-logo.png" 
               alt="Ainê Fisioterapia"
-              className="h-10 w-auto brightness-0 invert"
+              className="h-12 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-purple-100 leading-relaxed">

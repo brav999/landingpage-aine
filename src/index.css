@@ -101,3 +101,52 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Estilos para a Página de Privacidade */
+
+.privacy-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #fff;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.privacy-container h1 {
+  font-size: 2em;
+  color: #2c3e50;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.privacy-container h2 {
+  font-size: 1.5em;
+  color: #34495e;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.privacy-container strong {
+  color: #2c3e50;
+}
+
+.privacy-container ul {
+  padding-left: 20px;
+}
+
+.privacy-container li {
+  margin-bottom: 10px;
+}
+
+.privacy-footer {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+}

@@ -1,18 +1,18 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Baby, Heart, Users, Zap } from 'lucide-react';
+import { Heart, Users, Zap, Bandage } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Heart,
-      title: "Fisioterapia Pélvica",
-      description: "Tratamento especializado para disfunções do assoalho pélvico, incontinência urinária e dor pélvica."
+      title: "Fisioterapia Pélvica e Obstétrica",
+      description: "Atendimento especializado em dores pélvicas e obstétricas, oncologia pélvica, incontinência urinária, prolapsos (bexiga baixa), gestação e pós-parto."
     },
     {
-      icon: Baby,
-      title: "Fisioterapia Obstétrica",
-      description: "Acompanhamento durante a gestação, preparação para o parto e recuperação pós-parto."
+      icon: Bandage,
+      title: "Fisioterapia Dermatofuncional",
+      description: "Limpeza de pele, drenagem linfática, consultoria em skincare, taping no pós-parto e cuidados no pré, intra e pós-operatório."
     },
     {
       icon: Users,

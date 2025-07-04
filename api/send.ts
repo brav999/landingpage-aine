@@ -31,7 +31,7 @@ export default async function handler(
 
     try {
         const { data, error } = await resend.emails.send({
-            from: 'Atendimento <contato@seu-dominio-verificado.com.br>', // IMPORTANTE: Use seu domínio verificado
+            from: 'Atendimento <contato@enviar.ainefisiopelvica.com>',
             to: [email],
             subject: `Bem-vindo(a) à Ainê, ${nome}!`,
             html: `

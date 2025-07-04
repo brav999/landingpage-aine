@@ -1,7 +1,24 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
+import { google } from 'googleapis';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
+const scopes = ['https://www.googleapis.com/auth/spreadsheets']
+
+const base64EncodedCredentials = process.env.GOOGLE_SERVICE_ACCOUNT_BASE64;
+const decodedCredentials = Buffer.from(base64EncodedCredentials!, 'base64').toString('utf-8');
+const serviceAccountCredentials = JSON.parse(decodedCredentials);
+
+const auth = new google.auth.GoogleAuth({
+    credentials: serviceAccountCredentials,
+    scopes: scopes,
+  });
+
+const sheets = google.sheets({ version: 'v4', auth });
+const SPREADSHEET_ID = process.env.GOOGLE_SHEET_ID!;
 
 // Define uma interface para o corpo da requisição, garantindo que os dados esperados cheguem
 interface RequestBody {
@@ -22,7 +39,7 @@ export default async function handler(
     }
 
     // Extrai o corpo da requisição e aplica a tipagem da nossa interface
-    const { name, email, phone } = req.body as RequestBody;
+    const { name, email, phone, message } = req.body as RequestBody;
 
     // Validação simples para garantir que os campos não estão vazios
     if (!name || !email || !phone) {
@@ -30,6 +47,18 @@ export default async function handler(
     }
 
     try {
+        const timestamp = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' });
+        const sheetRow = [timestamp, name, email, phone, message];
+
+        await sheets.spreadsheets.values.append({
+            spreadsheetId: SPREADSHEET_ID,
+            range: 'A1',
+            valueInputOption: 'USER_ENTERED',
+            requestBody: {
+                values: [sheetRow],
+            },
+        });
+
         const { data, error } = await resend.emails.send({
             from: 'Atendimento <contato@enviar.ainefisiopelvica.com>',
             to: [email],

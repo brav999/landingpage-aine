@@ -65,7 +65,7 @@ export default async function handler(
             subject: `Bem-vindo(a) à Ainê, ${name}!`,
             html: `
         <div style="font-family: sans-serif; text-align: center; padding: 20px;">
-          <img src="https://www.ainefisiopelvica.com/logo.png" alt="Clínica Ainê" width="150" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+          <img src="https://www.ainefisiopelvica.com/images/logo.png" alt="Clínica Ainê" width="150" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
           <h1>Olá, ${name}!</h1>
           <p style="font-size: 16px;">Recebemos seu contato e ficamos muito felizes pelo seu interesse na <strong>Ainê</strong>.</p>
           <p style="font-size: 16px;">Em breve, nossa equipe entrará em contato para agendar sua consulta ou responder suas dúvidas.</p>

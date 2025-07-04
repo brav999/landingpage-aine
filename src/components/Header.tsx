@@ -1,5 +1,4 @@
 
-import { Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -21,11 +20,11 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#sobre" className="text-aine-purple hover:text-aine-green transition-colors font-medium">
-              Sobre
-            </a>
             <a href="#servicos" className="text-aine-purple hover:text-aine-green transition-colors font-medium">
               Serviços
+            </a>
+            <a href="#sobre" className="text-aine-purple hover:text-aine-green transition-colors font-medium">
+              Sobre
             </a>
             <a href="#contato" className="text-aine-purple hover:text-aine-green transition-colors font-medium">
               Contato
@@ -36,7 +35,7 @@ const Header = () => {
             onClick={scrollToContact}
             className="bg-aine-purple hover:bg-aine-purple/90 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
           >
-            Agendar Consulta
+            Entrar em contato
           </Button>
         </div>
       </div>

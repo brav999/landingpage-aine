@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="flex flex-col h-full justify-start animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold text-aine-purple mb-6 leading-tight">
-              Cuidado Especializado em
+              Cuidado especializado em
               <span className="text-aine-green block">Fisioterapia Pélvica</span>
             </h1>
             
@@ -27,14 +27,8 @@ const Hero = () => {
                 onClick={scrollToContact}
                 className="bg-aine-purple hover:bg-aine-purple/90 text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105"
               >
-                Agendar Avaliação
+                Entrar em contato
               </Button>
-              {/* <Button 
-                variant="outline" 
-                className="border-aine-green text-aine-green hover:bg-aine-green hover:text-white px-8 py-3 rounded-full text-lg transition-all duration-300"
-              >
-                Saiba Mais
-              </Button> */}
             </div>
 
             <div className="flex flex-wrap gap-6 self-start">

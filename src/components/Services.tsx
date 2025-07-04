@@ -1,28 +1,28 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, Users, Zap, Bandage } from 'lucide-react';
+import { Users, Bandage, Baby, HeartHandshake } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Heart,
-      title: "Fisioterapia Pélvica e Obstétrica",
-      description: "Atendimento especializado em dores pélvicas e obstétricas, oncologia pélvica, incontinência urinária, prolapsos (bexiga baixa), gestação e pós-parto."
+      icon: HeartHandshake,
+      title: "Fisioterapia Pélvica",
+      description: "Atendimento especializado nas disfunções do assoalho pélvico (incontinência urinária, prolapsos), dores pélvicas, oncologia pélvica."
+    },
+    {
+      icon: Baby,
+      title: "Fisioterapia Obstétrica",
+      description: "Atendimento especializado na preparação do corpo para o parto, prevenção das disfunções pélvicas durante a gestação e pós-parto."
     },
     {
       icon: Bandage,
       title: "Fisioterapia Dermatofuncional",
-      description: "Limpeza de pele, drenagem linfática, consultoria em skincare, taping no pós-parto e cuidados no pré, intra e pós-operatório."
+      description: "Atendimento especializado drenagem linfática, taping no pós-parto e cuidados no pré, intra e pós-operatório."
     },
     {
       icon: Users,
-      title: "Atendimento Individualizado",
-      description: "Consultas personalizadas com foco nas necessidades específicas de cada paciente."
-    },
-    {
-      icon: Zap,
-      title: "Técnicas Avançadas",
-      description: "Utilizamos as mais modernas técnicas e equipamentos para garantir os melhores resultados."
+      title: "Atendimento Personalizado",
+      description: "Consultas individualizadas com foco nas necessidades específicas de cada paciente utilizando de técnicas e equipamentos para garantir os melhores resultados."
     }
   ];
 

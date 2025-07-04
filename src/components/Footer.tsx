@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="border-t border-purple-400 mt-8 pt-8 text-center">
           <p className="text-purple-100 flex items-center justify-center space-x-2">
-            <span>© 2024 Ainê Fisioterapia. Feito com</span>
+            <span>© 2025 Ainê Fisioterapia Pélvica. Feito com</span>
             <Heart className="h-4 w-4 text-red-400" />
             <span>para o seu bem-estar.</span>
           </p>

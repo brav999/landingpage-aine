@@ -3,7 +3,7 @@ import { Award, Clock, Heart, Users } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Users, number: "500+", label: "Pacientes Atendidas" },
+    { icon: Users, number: "600+", label: "Pacientes Atendidas" },
     { icon: Award, number: "10+", label: "Anos de Experiência" },
     { icon: Heart, number: "98%", label: "Satisfação dos Pacientes" },
     { icon: Clock, number: "24h", label: "Suporte Disponível" }
@@ -15,11 +15,11 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-aine-purple mb-6">
-              Sobre a Clínica Ainê
+              Sobre a Ainê
             </h2>
             
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              A Clínica Ainê nasceu com o propósito de oferecer cuidado especializado e humanizado 
+              A Ainê nasceu com o propósito de oferecer cuidado especializado e humanizado
               em fisioterapia pélvica e obstétrica. Nossa missão é proporcionar bem-estar e qualidade 
               de vida através de tratamentos personalizados e eficazes.
             </p>

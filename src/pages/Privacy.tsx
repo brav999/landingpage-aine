@@ -54,7 +54,7 @@ function PrivacidadePage() {
 
             <h2>7. Contato</h2>
             <p>
-                Se você tiver qualquer dúvida sobre esta Política de Privacidade, entre em contato conosco através do e-mail: <strong>[E-mail de Contato para Privacidade]</strong>.
+                Se você tiver qualquer dúvida sobre esta Política de Privacidade, entre em contato conosco através do e-mail: <strong>contato@ainefisiopelvica.com</strong>.
             </p>
 
             {/* Adicionamos a classe "privacy-footer" aqui */}
@@ -64,7 +64,7 @@ function PrivacidadePage() {
                     <br />
                     Rua Princesa Isabel, 40, Sala 1008 - Criciúma/SC
                     <br />
-                    [CNPJ da Clínica]
+                    49.838.872/0001-12
                 </p>
             </div>
         </div>

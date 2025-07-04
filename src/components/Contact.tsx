@@ -49,7 +49,7 @@ const Contact = () => {
 
       toast({
         title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em breve para agendar sua consulta.",
+        description: "Entraremos em contato em breve.",
       });
 
       setFormData({ name: '', email: '', phone: '', message: '' });
@@ -82,7 +82,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
               Entre em Contato
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Estamos aqui para esclarecer suas dúvidas e agendar sua consulta
+              Estamos aqui para esclarecer suas dúvidas
             </p>
           </div>
 
@@ -90,7 +90,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
             <div>
               <Card className="border-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-aine-purple">Agende sua Consulta</CardTitle>
+                  <CardTitle className="text-aine-purple">Tire suas dúvidas</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -189,7 +189,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
                     </div>
                     <div>
                       <h4 className="font-medium text-aine-purple mb-1">E-mail</h4>
-                      <p className="text-gray-600">contato@ainefisioterapia.com.br</p>
+                      <p className="text-gray-600">contato@ainefisiopelvica.com</p>
                     </div>
                   </div>
 

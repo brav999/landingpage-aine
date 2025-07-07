@@ -38,10 +38,10 @@ const Footer = () => {
           <div>
             <h3 className="font-medium mb-4">Conecte-se Conosco</h3>
             <div className="flex space-x-4 mb-4">
-              <a href="https://www.instagram.com/ainesaudefeminina/" target='blank' className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
+              <a href="https://www.instagram.com/ainesaudefeminina/" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://api.whatsapp.com/message/W5FIXC4VYN32O1?autoload=1&app_absent=0" target='blank' className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center hover:bg-purple-500 transition-colors">
+              <a href="https://api.whatsapp.com/message/W5FIXC4VYN32O1?autoload=1&app_absent=0" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">
                 <Phone className="h-5 w-5" />
               </a>
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-purple-400 mt-8 pt-8 text-center">
+        <div className="border-t border-white-400 mt-8 pt-8 text-center">
           <p className="text-purple-100 flex items-center justify-center space-x-2">
             <span>© 2025 Ainê Fisioterapia Pélvica. Feito com</span>
             <Heart className="h-4 w-4 text-red-400" />

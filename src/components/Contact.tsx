@@ -47,6 +47,10 @@ const Contact = () => {
         throw new Error('Falha ao enviar a mensagem. Tente novamente.');
       }
 
+      if (typeof window.gtag_report_conversion === 'function') {
+        window.gtag_report_conversion();
+      }
+
       toast({
         title: "Mensagem enviada com sucesso!",
         description: "Entraremos em contato em breve.",

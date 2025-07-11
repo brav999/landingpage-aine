@@ -1,21 +1,6 @@
 
 import { Heart, Instagram, Phone } from 'lucide-react';
 
-const handleWhatsAppClick = (event) => {
-  // Previne a navegação imediata para que o script de conversão possa rodar
-  event.preventDefault();
-
-  const whatsAppUrl = "https://api.whatsapp.com/message/W5FIXC4VYN32O1?autoload=1&app_absent=0";
-
-  // Chama a função de conversão do Google, passando a URL para o callback
-  if (typeof window.gtag_report_conversion === 'function') {
-    window.gtag_report_conversion(whatsAppUrl);
-  } else {
-    // Caso o script do Google falhe, garante que o usuário ainda seja redirecionado
-    window.open(whatsAppUrl, '_blank');
-  }
-};
-
 const Footer = () => {
   return (
     <footer className="bg-aine-purple text-white py-12">
@@ -56,8 +41,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/ainefisiopelvica/" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://api.whatsapp.com/message/W5FIXC4VYN32O1?autoload=1&app_absent=0" target='blank' onClick={handleWhatsAppClick} className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">
-                <Phone className="h-5 w-5" />
+              <a href="https://wa.me/554834115334" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">                <Phone className="h-5 w-5" />
               </a>
             </div>
             <p className="text-purple-100 text-sm">

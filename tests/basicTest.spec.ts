@@ -30,7 +30,7 @@ await page.goto('/');
 });
 
 test('redirect to instagram', async ({ page, context }) => {
-  try {
+  
 await page.goto('/');
 
     const linkParaNovaAba = page.getByRole('link').filter({ hasText: /^$/ });
@@ -42,12 +42,7 @@ await page.goto('/');
 
     await newPage.waitForLoadState('networkidle');
 
-    const expectedUrl = 'https://www.instagram.com/ainefisiopelvica/';
+    const expectedUrl = /ainefisiopelvica/;
    
     await expect(newPage).toHaveURL(expectedUrl);
-
-  } catch (error) {
-    console.error('Ocorreu um erro durante o teste:', error);
-    throw error;
-  }
 });

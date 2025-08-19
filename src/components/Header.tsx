@@ -2,11 +2,6 @@
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contato');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
@@ -31,11 +26,17 @@ const Header = () => {
             </a>
           </nav>
 
-          <Button 
-            onClick={scrollToContact}
+          <Button
+            asChild
             className="bg-aine-purple hover:bg-aine-purple/90 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
           >
-            Entrar em contato
+            <a
+              href="https://wa.me/554834115334"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agendar consulta
+            </a>
           </Button>
         </div>
       </div>

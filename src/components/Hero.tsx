@@ -2,11 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Heart, Shield, Star } from 'lucide-react';
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contato');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="bg-gradient-to-br from-aine-light to-white py-20">
       <div className="container mx-auto px-4">
@@ -23,11 +18,17 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                onClick={scrollToContact}
+              <Button
+                asChild
                 className="bg-aine-purple hover:bg-aine-purple/90 text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105"
               >
-                Entrar em contato
+                <a
+                  href="https://wa.me/554834115334"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar consulta
+                </a>
               </Button>
             </div>
 

@@ -1,6 +1,9 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
+  const address = `Rua Princesa Isabel, 40, sala 1008\nCentro - Criciúma/SC`;
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&z=17&output=embed`;
+
   return (
     <section id="contato" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -54,11 +57,7 @@ const Contact = () => {
                     <h4 className="font-medium text-aine-purple mb-1">
                       Endereço
                     </h4>
-                    <p className="text-gray-600">
-                      Rua Princesa Isabel, 40, sala 1008
-                      <br />
-                      Centro - Criciúma/SC
-                    </p>
+                    <p className="text-gray-600 whitespace-pre-line">{address}</p>
                   </div>
                 </div>
 
@@ -73,6 +72,18 @@ const Contact = () => {
                     <p className="text-gray-600">Segunda à Sexta: 8h às 19h</p>
                   </div>
                 </div>
+              </div>
+              <div className="mt-8 rounded-lg overflow-hidden">
+                <iframe
+                  title="Mapa mostrando a localização da clínica"
+                  src={mapSrc}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
 

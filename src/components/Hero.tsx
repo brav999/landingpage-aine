@@ -49,7 +49,7 @@ const Hero = () => {
 
           <div className="relative flex items-start justify-center self-start">
             <img 
-              src="/images/logo.png" 
+              src="/logo.webp" 
               alt="Logo Ainê" 
               className="w-auto max-w-xs md:max-w-md object-contain mx-auto"
             />

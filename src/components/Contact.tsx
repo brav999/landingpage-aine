@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Loader2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -161,10 +161,11 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 
                     <Button
                         type="submit"
-                        disabled={!privacyAccepted}
+                        disabled={!privacyAccepted || isSubmitting}
                         className="w-full bg-aine-purple hover:bg-aine-purple/90 text-white py-3 rounded-full text-lg transition-all duration-300 hover:scale-105 disabled:bg-gray-400 disabled:hover:scale-100 disabled:cursor-not-allowed"
                     >
-                      Enviar Mensagem
+                      {isSubmitting && <Loader2 className="animate-spin" />}
+                      {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
                     </Button>
                   </form>
                 </CardContent>

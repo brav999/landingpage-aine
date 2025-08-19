@@ -23,67 +23,70 @@ const Contact = () => {
                 Informações de Contato
               </h3>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-aine-purple" />
+              <div className="flex flex-col md:flex-row md:items-start md:space-x-8">
+                <div className="space-y-6 md:flex-1">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-5 w-5 text-aine-purple" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-aine-purple mb-1">
+                        Telefone
+                      </h4>
+                      <p className="text-gray-600">(48) 3411-5334</p>
+                      <p className="text-sm text-gray-500">WhatsApp disponível</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-medium text-aine-purple mb-1">
-                      Telefone
-                    </h4>
-                    <p className="text-gray-600">(48) 3411-5334</p>
-                    <p className="text-sm text-gray-500">WhatsApp disponível</p>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-5 w-5 text-aine-purple" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-aine-purple mb-1">E-mail</h4>
+                      <p className="text-gray-600">
+                        contato@ainefisiopelvica.com
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-aine-purple" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-aine-purple mb-1">
+                        Endereço
+                      </h4>
+                      <p className="text-gray-600 whitespace-pre-line">{address}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-5 w-5 text-aine-purple" />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-aine-purple mb-1">
+                        Horário de Funcionamento
+                      </h4>
+                      <p className="text-gray-600">Segunda à Sexta: 8h às 19h</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-aine-purple" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-aine-purple mb-1">E-mail</h4>
-                    <p className="text-gray-600">
-                      contato@ainefisiopelvica.com
-                    </p>
-                  </div>
+                <div className="mt-8 md:mt-0 md:w-96 md:flex-shrink-0 rounded-lg overflow-hidden">
+                  <iframe
+                    title="Mapa mostrando a localização da clínica"
+                    src={mapSrc}
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-aine-purple" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-aine-purple mb-1">
-                      Endereço
-                    </h4>
-                    <p className="text-gray-600 whitespace-pre-line">{address}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-aine-light rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-5 w-5 text-aine-purple" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-aine-purple mb-1">
-                      Horário de Funcionamento
-                    </h4>
-                    <p className="text-gray-600">Segunda à Sexta: 8h às 19h</p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 rounded-lg overflow-hidden">
-                <iframe
-                  title="Mapa mostrando a localização da clínica"
-                  src={mapSrc}
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
               </div>
             </div>
 

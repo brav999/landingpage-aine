@@ -29,13 +29,11 @@ jobs:
         run: npm run build
 
       - name: Run Playwright tests
-        run: npx playwright test --reporter=html,json
+        run: npx playwright test --reporter=json
 
       - name: TestDino Reporter
-        env:
-          TOKEN_DINO: ${{ secrets.TOKEN_DINO }}
-          TESTDINO_TOKEN: ${{ secrets.TOKEN_DINO }}
-        run: npx --yes tdpw path/to/json/report/directory --token=$TOKEN_DINO --upload-html  
+        run: 
+         npx tdpw upload path/to/report/directory --token="trx_production_8dbb7e2e38a1b0caf5db44fce5928b12de07bb7b3d3def41425afa8c8609430e" --upload-html
 
       - name: Upload test results
         if: always()

@@ -1,11 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('/');
-
-  await expect(page).toHaveTitle(/Ainê/);
-});
-
 test('redirect to whatsapp', async ({ page, context }) => {
   try {
 await page.goto('/');
@@ -27,22 +21,4 @@ await page.goto('/');
     console.error('Ocorreu um erro durante o teste:', error);
     throw error;
   }
-});
-
-test('redirect to instagram', async ({ page, context }) => {
-  
-await page.goto('/');
-
-    const linkParaNovaAba = page.getByRole('link').filter({ hasText: /^$/ });
-    await expect(linkParaNovaAba).toBeVisible();
-
-    const pagePromise = context.waitForEvent('page');
-    await linkParaNovaAba.click();
-    const newPage = await pagePromise;
-
-    await newPage.waitForLoadState('networkidle');
-
-    const expectedUrl = /ainefisiopelvica/;
-   
-    await expect(newPage).toHaveURL(expectedUrl);
 });

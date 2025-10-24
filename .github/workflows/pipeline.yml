@@ -33,7 +33,7 @@ jobs:
 
       - name: TestDino Reporter
         run: 
-         npx tdpw upload path/to/report/directory --token="trx_production_8dbb7e2e38a1b0caf5db44fce5928b12de07bb7b3d3def41425afa8c8609430e" --upload-html
+         npx tdpw upload ./playwright-report --token="trx_production_8dbb7e2e38a1b0caf5db44fce5928b12de07bb7b3d3def41425afa8c8609430e" --upload-html
 
       - name: Upload test results
         if: always()

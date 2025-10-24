@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -29,11 +29,12 @@ jobs:
         run: npm run build
 
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npx playwright test --reporter=html,json
 
       - name: TestDino Reporter
         env:
           TOKEN_DINO: ${{ secrets.TOKEN_DINO }}
+          TESTDINO_TOKEN: ${{ secrets.TOKEN_DINO }}
         run: npx --yes tdpw path/to/json/report/directory --token=$TOKEN_DINO --upload-html  
 
       - name: Upload test results

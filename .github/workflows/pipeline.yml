@@ -44,6 +44,11 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+      - name: TestDino Reporter
+        env:
+          TOKEN_DINO: ${{ secrets.TOKEN_DINO }}
+        run: npx --yes tdpw path/to/json/report/directory --token=$TOKEN_DINO --upload-html  
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4

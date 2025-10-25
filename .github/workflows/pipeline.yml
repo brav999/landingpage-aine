@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [homolog]
+    branches: [main, homolog]
   pull_request:
-    branches: [main]
+    branches: [main, homolog]
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -31,10 +31,14 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+      - name: List Playwright report files
+        run: |
+          echo "Current path: $(pwd)"
+          ls -R ./playwright-report
+
       - name: TestDino Reporter
-        env:
-          TOKEN_DINO: ${{ secrets.TOKEN_DINO }}
-        run: npx --yes tdpw path/to/json/report/directory --token=$TOKEN_DINO --upload-html  
+        run: 
+         npx tdpw upload ./playwright-report --token="trx_production_8dbb7e2e38a1b0caf5db44fce5928b12de07bb7b3d3def41425afa8c8609430e"
 
       - name: Upload test results
         if: always()

@@ -14,6 +14,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['json', { outputFile: 'playwright-report/report.json' }],
+    ['html', { outputFolder: 'playwright-report/html', open: 'never' }],
   ],
   use: {
     baseURL: "https://www.ainefisiopelvica.com/",

@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262 20% 45%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Privacy page styles */
+.privacy-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  color: #333333;
+  background-color: #ffffff;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(120, 93, 136, 0.12);
+  border: 1px solid rgba(120, 93, 136, 0.08);
+}
+
+.privacy-container h1 {
+  font-size: 2rem;
+  color: #785D88;
+  border-bottom: 2px solid rgba(120, 93, 136, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.privacy-container h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.privacy-container strong {
+  color: #2c3e50;
+}
+
+.privacy-container ul {
+  padding-left: 20px;
+}
+
+.privacy-container li {
+  margin-bottom: 12px;
+}
+
+.privacy-footer {
+  margin-top: 40px;
+  border-top: 1px solid rgba(120, 93, 136, 0.15);
+  padding-top: 20px;
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 24px;
+    margin: 24px auto;
+  }
+}

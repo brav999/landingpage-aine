@@ -1,56 +1,55 @@
+import { Users, Bandage, Baby, HeartHandshake } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Bandage, Baby, HeartHandshake } from 'lucide-react';
+const services = [
+  {
+    icon: HeartHandshake,
+    title: "Fisioterapia Pélvica",
+    description:
+      "Atendimento especializado nas disfunções do assoalho pélvico (incontinência urinária, prolapsos), dores pélvicas e oncologia pélvica.",
+  },
+  {
+    icon: Baby,
+    title: "Fisioterapia Obstétrica",
+    description:
+      "Preparação do corpo para o parto, prevenção de disfunções durante a gestação e acompanhamento no pós-parto.",
+  },
+  {
+    icon: Bandage,
+    title: "Fisioterapia Dermatofuncional",
+    description:
+      "Protocolos de drenagem linfática, taping no pós-parto e cuidados pré, intra e pós-operatórios para recuperação segura.",
+  },
+  {
+    icon: Users,
+    title: "Atendimento Personalizado",
+    description:
+      "Consultas individualizadas com técnicas e equipamentos específicos para garantir os melhores resultados para cada paciente.",
+  },
+];
 
 const Services = () => {
-  const services = [
-    {
-      icon: HeartHandshake,
-      title: "Fisioterapia Pélvica",
-      description: "Atendimento especializado nas disfunções do assoalho pélvico (incontinência urinária, prolapsos), dores pélvicas, oncologia pélvica."
-    },
-    {
-      icon: Baby,
-      title: "Fisioterapia Obstétrica",
-      description: "Atendimento especializado na preparação do corpo para o parto, prevenção das disfunções pélvicas durante a gestação e pós-parto."
-    },
-    {
-      icon: Bandage,
-      title: "Fisioterapia Dermatofuncional",
-      description: "Atendimento especializado drenagem linfática, taping no pós-parto e cuidados no pré, intra e pós-operatório."
-    },
-    {
-      icon: Users,
-      title: "Atendimento Personalizado",
-      description: "Consultas individualizadas com foco nas necessidades específicas de cada paciente utilizando de técnicas e equipamentos para garantir os melhores resultados."
-    }
-  ];
-
   return (
-    <section id="servicos" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-aine-purple mb-4">
-            Nossos Serviços
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Oferecemos uma gama completa de serviços especializados em fisioterapia pélvica e obstétrica
+    <section id="servicos" className="bg-white py-20">
+      <div className="container px-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-aine-purple md:text-4xl">Nossos Serviços</h2>
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600">
+            Oferecemos uma gama completa de serviços especializados em fisioterapia pélvica e obstétrica.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-gray-100 hover:border-aine-green/30">
-              <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-aine-light rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-aine-green/10 transition-colors">
-                  <service.icon className="h-8 w-8 text-aine-purple group-hover:text-aine-green transition-colors" />
-                </div>
-                <CardTitle className="text-xl text-aine-purple">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center leading-relaxed">{service.description}</p>
-              </CardContent>
-            </Card>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {services.map(({ icon: Icon, title, description }) => (
+            <div
+              key={title}
+              className="group rounded-2xl border border-slate-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-aine-green/40 hover:shadow-lg"
+            >
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-aine-light transition-colors group-hover:bg-aine-green/15">
+                <Icon className="h-8 w-8 text-aine-purple transition-colors group-hover:text-aine-green" />
+              </div>
+              <h3 className="text-xl font-semibold text-aine-purple">{title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-slate-600">{description}</p>
+            </div>
           ))}
         </div>
       </div>

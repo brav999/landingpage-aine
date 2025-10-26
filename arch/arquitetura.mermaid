@@ -1,0 +1,32 @@
+graph TD
+  subgraph Frontend [Frontend (Vercel)]
+    A1[Next.js / React]
+    A2[Vercel Analytics]
+    A3[Sentry SDK]
+  end
+
+  subgraph Observabilidade
+    B1[Axiom.dev]
+    B2[Better Uptime]
+    B3[UptimeRobot]
+  end
+
+  subgraph Backend [API (futura ou serverless)]
+    C1[NestJS / Node]
+    C2[Supabase (Postgres + Auth)]
+    C3[Pino Logs -> Axiom]
+  end
+
+  subgraph Segurança
+    D1[Helmet / CSP]
+    D2[reCAPTCHA]
+    D3[Cookie Consent (Klaro!)]
+  end
+
+  A1 --> B1
+  A1 --> B2
+  A1 --> D1
+  C1 --> B1
+  C1 --> C2
+  C1 --> D1
+  D1 --> B3

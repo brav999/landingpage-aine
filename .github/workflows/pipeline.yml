@@ -2,24 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [homolog]
+    branches: [main, homolog]
   pull_request:
-    branches: [main]
+    branches: [main, homolog]
 
 jobs:
-  sonarQube:
-    runs-on: ubuntu-latest
-    environment: Preview
-    steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
   test:
     runs-on: ubuntu-latest
     steps:
@@ -29,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -43,6 +30,15 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+
+      - name: List Playwright report files
+        run: |
+          echo "Current path: $(pwd)"
+          ls -R ./playwright-report
+
+      - name: TestDino Reporter
+        run: 
+         npx tdpw upload ./playwright-report --token="trx_production_8dbb7e2e38a1b0caf5db44fce5928b12de07bb7b3d3def41425afa8c8609430e"
 
       - name: Upload test results
         if: always()

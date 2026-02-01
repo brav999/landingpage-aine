@@ -56,6 +56,9 @@ const Footer = () => {
             <Heart className="h-4 w-4 text-red-400" />
             <span>para o seu bem-estar.</span>
           </p>
+          <p className="text-purple-300 text-xs font-normal opacity-50 mt-3">
+            crafted by bl
+          </p>
         </div>
       </div>
     </footer>

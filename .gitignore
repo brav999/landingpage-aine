@@ -27,3 +27,4 @@ dist-ssr
 .scannerwork
 
 playwright-report
+test-results

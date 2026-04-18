@@ -13,7 +13,7 @@ await page.goto('/');
 
     await newPage.waitForLoadState('networkidle');
 
-    const expectedUrl = /ainefisiopelvica/;
+    const expectedUrl = /ainesaudefeminina/;
    
     await expect(newPage).toHaveURL(expectedUrl);
 });

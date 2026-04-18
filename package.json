@@ -91,5 +91,14 @@
     "vite": "^7.1.12",
     "vite-plugin-sitemap": "^0.8.2",
     "vitest": "^3.2.4"
+  },
+  "overrides": {
+    "@vercel/static-config": {
+      "ajv": "^8.18.0"
+    },
+    "minimatch": "^10.2.5",
+    "smol-toml": "^1.6.1",
+    "path-to-regexp": "^6.3.0",
+    "undici": "^6.25.0"
   }
 }

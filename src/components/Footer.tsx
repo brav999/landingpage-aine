@@ -38,7 +38,7 @@ const Footer = () => {
           <div>
             <h3 className="font-medium mb-4">Conecte-se Conosco</h3>
             <div className="flex space-x-4 mb-4">
-              <a href="https://www.instagram.com/ainefisiopelvica/" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">
+              <a href="https://www.instagram.com/ainesaudefeminina/" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://wa.me/554834115334" target='blank' className="w-10 h-10 bg-aine-green rounded-full flex items-center justify-center hover:bg-aine-purple transition-colors">                <Phone className="h-5 w-5" />
